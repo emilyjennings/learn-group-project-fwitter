@@ -1,12 +1,17 @@
 class TweetsController < ApplicationController
 
+  get '/tweets' do
+    @tweet = Tweet.all
+    erb :show
+  end
+
   get '/tweets/new' do
     @tweet = Tweet.all
     erb :new
   end
 
   post '/tweets' do
-    @tweet = Tweet.all
+    @tweet = Tweet.create(content: params[:content])
     erb :show
   end
 
