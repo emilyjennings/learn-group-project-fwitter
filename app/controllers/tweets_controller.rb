@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
-get '/tweets' do
-  @tweet = Tweet.all
-end
+  get '/tweets' do
+    @tweet = Tweet.all
+  end
 
 end
