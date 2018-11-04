@@ -9,4 +9,4 @@ use UsersController
 use TweetsController
 run ApplicationController
 
-require_all 'app'
+# require_all 'app'
