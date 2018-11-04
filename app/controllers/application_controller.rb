@@ -1,3 +1,4 @@
+require 'pry'
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -10,15 +11,10 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    erb :layout
+    erb :index
   end
 
   helpers do
-    # def redirect_if_not_logged_in
-    #   if !logged_in?
-    #     redirect "/login?error=You have to be logged in to do that"
-    #   end
-    # end
 
     def logged_in?
       !!session[:user_id]

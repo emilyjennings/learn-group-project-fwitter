@@ -26,6 +26,14 @@ class TweetsController < ApplicationController
 
   post '/tweets/:id' do
     redirect '/tweets/#{tweets.id}'
+
+    if logged_in?
+      @tweets = Tweet.all
+      erb :'tweets/tweets'
+    else
+      redirect to '/login'
+    end
+
   end
 
 end
