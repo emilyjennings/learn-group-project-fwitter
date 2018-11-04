@@ -1,12 +1,12 @@
 class TweetsController < ApplicationController
 
   get '/tweets' do
-    @tweet = Tweet.all
+    @tweets = Tweet.all
     erb :show
   end
 
   get '/tweets/new' do
-    @tweet = Tweet.all
+    @tweets = Tweet.all
     erb :new
   end
 
