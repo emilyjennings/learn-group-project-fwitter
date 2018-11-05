@@ -1,7 +1,5 @@
-<h1>Tweets</h1>
-<p><%@tweets.each do |t|%>
-  <%="#{t.content}"%>
+<h1>Your Tweet:</h1>
 
-<%end%></p>
+<p><%=@tweet.content%></p>
 
 <a href="/tweets/new">Create new tweet</a>
