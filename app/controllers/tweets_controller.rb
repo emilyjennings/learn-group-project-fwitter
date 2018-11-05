@@ -27,8 +27,12 @@ class TweetsController < ApplicationController
   end
 
   get "/tweets/:id" do
-    @tweet = Tweet.find(params[:id])
-    redirect '/tweets/#{tweets.id}'
+    if logged_in?
+      @tweet = Tweet.find(params[:id])
+      redirect '/tweets/#{tweets.id}'
+    else
+      redirect "/login"
+    end
   end
 
   get '/tweets/:id/edit' do
