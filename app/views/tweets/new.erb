@@ -5,11 +5,15 @@
     <title>New Tweet</title>
   </head>
   <body>
-    <h1>Create a New Tweet:</h1>
-    <form action="/tweets" method="post">
-      <input type="text" name="content" value="your content here">
-      <input type="submit" name="submit" id='submit' value="Submit">
-    </form>
+    <%if logged_in?%>
+      <h1>Create a New Tweet:</h1>
+      <form action="/tweets" method="post">
+        <input type="text" name="content" value="your content here">
+        <input type="submit" name="submit" id='submit' value="submit">
+      </form>
+    <%else%>
+      <a href="/login">Login</a>
+    <%end%>
 
 
   </body>
