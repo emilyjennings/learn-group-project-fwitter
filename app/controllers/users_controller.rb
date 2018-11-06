@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     if !logged_in?
      erb :'/users/signup'
    else
-     redirect to '/tweets'
+     redirect '/tweets/show'
    end
   end
 
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'/users/login'
     else
-     redirect to '/tweets'
+     redirect '/tweets/tweet'
    end
   end
 
