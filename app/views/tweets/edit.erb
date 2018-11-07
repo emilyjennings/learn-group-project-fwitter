@@ -10,8 +10,9 @@
       <form action="/tweets/<%=@tweet.id%>/edit" method="post">
         <input id="hidden" type="hidden" name="_method" value="patch">
         <textarea name="content" id="content" cols="20" rows="10">
-          <%Tweet.all.each do |tweet|%>
-          <%=tweet.content%><%end%></textarea>
+          <!-- <%Tweet.all.each do |tweet|%>
+          <%=tweet.content%><%end%></textarea> -->
+          <%=@tweet.content%>
         <input type="submit" value="submit" id="submit">
       </form>
     <!-- <%else%> -->
